@@ -1,0 +1,524 @@
+@font-face {
+    font-display: swap;
+    font-family: helvetica;
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/HelveticaNeue-Light.otf) format("opentype");
+}
+@font-face {
+    font-display: swap;
+    font-family: helvetica;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/HelveticaNeue-Regular.otf) format("opentype");
+}
+@font-face {
+    font-display: swap;
+    font-family: helvetica;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/HelveticaNeue-Medium.otf) format("opentype");
+}
+@font-face {
+    font-display: swap;
+    font-family: playfair;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/PlayfairDisplay-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-display: swap;
+    font-family: playfair;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/PlayfairDisplay-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-display: swap;
+    font-family: playfair;
+    font-style: normal;
+    font-weight: 900;
+    src: url(../fonts/PlayfairDisplay-Black.ttf) format("truetype");
+}
+/*===========================================
+============== END FONTS
+============================================*/
+
+.container {
+    max-width: 1147px;
+}
+.gutter-right-none {
+    padding-right: 0;
+}
+.nav-wrapper {
+    height: 80px;
+    background: #662B97;
+}
+
+.nav-wrapper nav {
+    padding: 19px 0;
+
+}
+.nav-wrapper ul {
+    margin: 0;
+}
+.nav-wrapper ul li {
+    display: inline-block;
+    line-height: 24px;
+}
+.nav-wrapper ul li a {
+    color: #ffffff;
+    padding: 9px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: block;
+    font-family: helvetica,"sans-serif",Arial;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+.nav-wrapper ul li a:hover {
+    background: rgb(183, 140, 205, .3);
+}
+
+.main-section {
+    margin: 0 0 180px 0;
+}
+.main-section .logo {
+    margin: 42px 0 0 0;
+}
+.main-section .section-title {
+    font-weight: 700;
+    font-size:46px;
+    line-height: 64px;
+    font-family: playfair,"sans-serif",Arial;
+    margin: 100px 0 64px;
+}
+
+.main-section .image-wrapper {
+    position: relative;
+}
+.main-section .image-wrapper .large-img {
+    left: -30px;
+    top: 77px;
+    position: absolute;
+    max-width: 750px;
+
+}
+
+.btn-style-main {
+    padding: 12px 0px;
+    width: 124px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 20px;
+    background: rgba(183, 140, 205, 0.3);
+    color: #662B97;
+}
+.btn-style-main:hover {
+    background: #662b97;
+    color:#fff;
+}
+.btn-style-second {
+    text-transform: uppercase;
+    color: #101825;
+    font-family: helvetica,"sans-serif",Arial;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+}
+
+.btn-style-second span {
+    border: 1px solid #101825;
+    padding: 12px 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 0 0 10px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-style-second:hover span {
+    background: #8dc63f;
+    border: 1px solid #8dc63f;
+
+}
+.btn-style-second:hover span svg {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-style-second:hover svg path {
+    fill: #fff;
+}
+/*===========================================
+============== END HEADER SECTION
+============================================*/
+
+#accordion {
+    background: #f1f2f4;
+    height: 600px;
+}
+#accordion .acc-wrapper {
+    display: flex;
+}
+#accordion .acc-item {
+    display: flex;
+    max-width: 100%;
+    border-left: 1px solid #c9ced6;
+    height: 600px;
+}
+
+#accordion .acc-item .heading {
+    position: relative;
+    border: none;
+    display: inline-block;
+    min-width: 87px;
+    background: transparent;
+}
+
+#accordion .acc-item .heading span {
+    text-align: center;
+    overflow: hidden;
+    height: 87px;
+    line-height: 87px;
+    width: 600px;
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    font-size: 32px;
+    font-weight: 500;
+    color: #384357;
+    font-family: helvetica,"sans-serif",Arial;
+}
+#accordion .acc-item.active .heading span {
+    color: #662b97;
+}
+
+.acc-item.active {
+    width: calc(100vw - 104px);
+}
+
+#accordion .acc-item .panel {
+    display: none;
+    min-width: 0;
+    margin: 77px 0 0 0;
+}
+
+#accordion .acc-item.active .panel {
+    display: revert;
+    width: 100%;
+}
+
+#accordion .acc-item .panel .container {
+    max-width: 900px;
+}
+
+#accordion .acc-item .panel .title {
+    color: #101825;
+    margin-bottom: 24px;
+    font-family: playfair,"sans-serif",Arial;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 64px;
+}
+
+#accordion .acc-item .panel .second-title {
+    font-family: helvetica,"sans-serif",Arial;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 28px;
+    color: #101825;
+    display: block;
+    margin-bottom: 16px;
+}
+
+#accordion .acc-item .panel .content {
+    -ms-overflow-style:none;
+    height: 120px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    color: #384357;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    /*section {*/
+    /*    display: revert;*/
+    /*    height: revert;*/
+    /*}*/
+
+    /*.heading {*/
+    /*    display: block;*/
+    /*    width: 100%;*/
+    /*    height: 50px;*/
+    /*}*/
+}
+
+/*===========================================
+============== END ACCORDION SECTION
+============================================*/
+
+
+
+.slick-dots
+{
+    position: absolute;
+    bottom: 10px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+    background: #fff;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    opacity: .75;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+
+.slick-dots li.slick-active button {
+    opacity: 1;
+}
+/*===========================================
+============== END SLICK DOTS
+============================================*/
+
+section#susha {
+    background: #f1f2f4;
+    padding: 64px 0 0 0;
+}
+section#susha .container {
+    max-width: 1440px;
+}
+
+section#susha .image-col {
+    padding: 0;
+}
+section#susha .image-col img {
+    max-width: 100%;
+}
+
+section#susha .susha-content {
+    padding: 0 0 0 15px;
+}
+
+section#susha .susha-content h1 {
+    color: #101825;
+    font-family: playfair,"sans-serif",Arial;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 56px;
+    margin: 0 0 15px;
+}
+
+section#susha .susha-content {
+    color: #384357;
+    margin: 16px 0 0 0;
+    max-width: 432px;
+    width: 100%;
+}
+
+section#susha .susha-content .btn {
+    margin: 30px 0 0 0;
+    padding: 12px 6px 12px 0;
+}
+
+/*===========================================
+============== END SECTION SUSA
+============================================*/
+
+section#shusha-second {
+    padding: 64px 0;
+    background: linear-gradient(249deg, #8908F3 -0.95%, #501780 101.18%);
+}
+
+section#shusha-second .content {
+    color: #fff;
+    max-width: 440px;
+}
+
+section#shusha-second .content h1 {
+    font-family: playfair,"sans-serif",Arial;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 64px;
+    margin-bottom: 20px;
+}
+
+section#shusha-second .content p {
+    font-family: helvetica,"sans-serif",Arial;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+section#shusha-second .content .btn-style-second {
+    color: #fff;
+    padding: 12px 6px 12px 0;
+}
+section#shusha-second .content .btn-style-second span {
+    border: 1px solid #fff;
+}
+section#shusha-second .content .btn-style-second svg path {
+    fill: #fff;
+}
+
+section#shusha-second  .slider-head {
+    font-family: playfair,"sans-serif",Arial;
+    letter-spacing: normal;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 0 0 30px;
+}
+
+section#shusha-second  .slider-wrapper {
+    position: relative;
+}
+.slick-arrow {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.previus_slick {
+    right: 40px;
+}
+.slick-arrow svg  {
+    fill: #f7f8f9;
+    -webkit-transition: .4s linear;
+    transition: .4s linear;
+}
+/*===========================================
+============== END SECTION SUSHA SECOND
+============================================*/
+
+
+#footer {
+    background: #290a44;
+    color: #fff;
+}
+.foo-top {
+    padding: 20px 0;
+}
+
+.foo-top .social-media {
+    text-align: right;
+
+}
+
+.foo-top .social-media a {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 0.25px solid #fff;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin: 0 0px 0 10px;
+}
+.foo-top .social-media a svg {
+    margin-top: 3px;
+}
+
+.foo {
+    border-bottom: 1px solid hsla(0,0%,96%,.12);
+    border-top: 1px solid hsla(0,0%,96%,.12);
+    padding: 60px 0;
+}
+
+.foo h6 {
+    color: #fff;
+    cursor: default;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: playfair,"sans-serif",Arial;
+    font-size: 20px;
+    letter-spacing: normal;
+    line-height: 28px;
+}
+
+.foo ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+.foo ul li {
+    margin-bottom: 12px;
+}
+
+.foo ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: helvetica,"sans-serif",Arial;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 24px;
+}
+
+.foo-bot, .foo-bot a {
+    color: #fff;
+}
+
+.foo-bot p {
+    padding: 20px 0;
+    margin: 0;
+    display: block;
+}
+
+
+.text-align-right {
+    text-align: right;
+}
+.mb-80 {
+    margin-bottom: 80px;
+}
